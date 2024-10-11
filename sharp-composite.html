@@ -1,0 +1,44 @@
+<script type="text/javascript">
+	RED.nodes.registerType('sharp-composite',{
+		category: 'sharp',
+		color: '#99cc00',
+		defaults: {
+			name: {value:""},
+			blend: {value:"over"},
+			overlay: {value:""},
+		},
+		inputs: 1,
+		outputs: 1,
+		icon: "hash.svg",
+		label: function() {
+			return this.name||"sharp-composite";
+		}
+	});
+</script>
+
+<script type="text/html" data-template-name="sharp-composite">
+	<div class="form-row">
+		<label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+	<div class="form-row">
+		<label for="node-input-blend">Width</label>
+		<input type="text" id="node-input-blend">
+	</div>
+	<div class="form-row">
+		<label for="node-input-overlay">Height</label>
+		<input type="text" id="node-input-overlay">
+	</div>
+	
+	<div class="form-tips" id="node-tip">
+		TK
+		Tip: For Sharp arguments, the node will accept flow arguments over inputs.<br>
+		Arguments are the same name, but stored within <code>msg.sharp</code> object.<br>
+		e.g. for width, it looks for <code>msg.sharp.width</code>.<br>
+		<strong>This is alpha, and may change at a later version.</strong>
+	</div>
+</script>
+
+<script type="text/html" data-help-name="sharp-composite">
+	<p>Allows for adding a composite to a binary buffer image payload.</p>
+</script>

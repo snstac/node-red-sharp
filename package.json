@@ -6,7 +6,8 @@
     "version": ">=3.1.0",
     "nodes": {
       "sharp-convert": "sharp-convert.js",
-      "sharp-resize": "sharp-resize.js"
+      "sharp-resize": "sharp-resize.js",
+      "sharp-composite": "sharp-composite.js"
     }
   },
   "author": "soup-bowl <code@soupbowl.io>",
